@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1457377999607
+Build-Jdk: 1.7.0_95
+Built-By: vmehmeri
+Bundle-ManifestVersion: 2
+Bundle-Name: sample-toaster
+Bundle-SymbolicName: org.opendaylight.controller.samples.sample-toaster
+Bundle-Version: 1.2.5.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Embed-Dependency: utils
+Export-Package: org.opendaylight.yang.gen.v1.http.netconfcentral.org.ns.
+ toaster.rev091120;uses:="com.google.common.collect,org.opendaylight.yan
+ gtools.concepts,org.opendaylight.yangtools.yang.binding,org.opendayligh
+ t.yangtools.yang.common";version="1.2.5.SNAPSHOT"
+Import-Package: com.google.common.base;version="[18.0,19)",com.google.co
+ mmon.collect;version="[18.0,19)",org.opendaylight.yangtools.concepts;ve
+ rsion="[0.7,1)",org.opendaylight.yangtools.yang.binding;version="[0.7,1
+ )",org.opendaylight.yangtools.yang.common;version="[0.7,1)"
+Tool: Bnd-2.1.0.20130426-122213

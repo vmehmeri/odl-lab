@@ -28,6 +28,8 @@
     <checkstyle.skip>true</checkstyle.skip>
     <codeGeneratorPath>src/main/yang-gen-code</codeGeneratorPath>
     <configCodeGeneratorPath>src/main/yang-gen-config</configCodeGeneratorPath>
+    <salGeneratorPath>src/main/yang-gen-sal</salGeneratorPath>
+    <jmxGeneratorPath>target/generated-sources/config-binding</jmxGeneratorPath>
 
     <!-- SDN Hub artifact versions -->
     <learning-switch.version>1.0.0-SNAPSHOT</learning-switch.version>

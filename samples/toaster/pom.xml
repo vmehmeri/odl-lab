@@ -54,6 +54,60 @@
           </execution>
         </executions>
       </plugin>
+       <plugin>
+         <groupId>org.apache.felix</groupId>
+         <artifactId>maven-bundle-plugin</artifactId>
+         <version>2.4.0</version>
+         <extensions>true</extensions>
+         <configuration>
+           <instructions>
+             <Import-Package>*</Import-Package>
+             <Embed-Dependency>utils</Embed-Dependency>
+           </instructions>
+           <manifestLocation>${project.basedir}/META-INF</manifestLocation>
+         </configuration>
+       </plugin>
+      <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>build-helper-maven-plugin</artifactId>
+          <version>1.8</version>
+          <executions>
+              <execution>
+                  <id>add-source</id>
+                  <goals>
+                      <goal>add-source</goal>
+                  </goals>
+                  <phase>generate-sources</phase>
+                  <configuration>
+                      <sources>
+                          <source>src/main/yang</source>
+                          <source>${codeGeneratorPath}</source>
+                          <source>${configCodeGeneratorPath}</source>
+                      </sources>
+                  </configuration>
+              </execution>
+          </executions>
+      </plugin>
+      <!--  cleans up auto generated code  -->
+      <plugin>
+        <artifactId>maven-clean-plugin</artifactId>
+        <configuration>
+          <filesets>
+            <fileset>
+              <directory>${codeGeneratorPath}</directory>
+              <includes>
+                <include>**</include>
+              </includes>
+            </fileset>
+            <fileset>
+              <directory>${configCodeGeneratorPath}</directory>
+              <includes>
+                <include>**</include>
+              </includes>
+            </fileset>
+          </filesets>
+        </configuration>
+      </plugin>
     </plugins>
   </build>
   <scm>

@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Bnd-LastModified: 1457343201007
+Bnd-LastModified: 1457346361074
 Build-Jdk: 1.7.0_95
 Built-By: vmehmeri
 Bundle-ClassPath: .,utils-1.0.0-SNAPSHOT.jar
