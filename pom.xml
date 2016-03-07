@@ -23,6 +23,7 @@
       <module>features</module>        <!-- Karaf feature description -->
       <module>distribution</module>    <!-- Branding and packaging -->
     <module>topomanager</module>
+    <module>samples</module>
   </modules>
 
 </project>

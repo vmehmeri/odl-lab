@@ -79,6 +79,8 @@
     <feature.mdsal.version>1.2.0-Lithium</feature.mdsal.version>
     <feature.openflowplugin.version>0.1.0-Lithium</feature.openflowplugin.version>
 
+    <opendaylight-l2-types.version>2013.08.27.7.5-SNAPSHOT</opendaylight-l2-types.version>
+
   </properties>
 
   <build>
@@ -164,6 +166,11 @@
     </dependency>
     <dependency>
       <groupId>org.opendaylight.yangtools.model</groupId>
+      <artifactId>opendaylight-l2-types</artifactId>
+      <version>${opendaylight-l2-types.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.opendaylight.yangtools.model</groupId>
       <artifactId>yang-ext</artifactId>
       <version>${yang-ext.version}</version>
     </dependency>
@@ -192,5 +199,15 @@
       <artifactId>sal-binding-api</artifactId>
       <version>${mdsal.version}</version>
     </dependency>
+    <dependency>
+      <groupId>org.opendaylight.controller</groupId>
+      <artifactId>sal-common-util</artifactId>
+      <version>${mdsal.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.osgi</groupId>
+      <artifactId>org.osgi.core</artifactId>
+    </dependency>
+
   </dependencies>
 </project>
